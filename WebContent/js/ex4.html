@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+var n, s;
+
+//while
+n=0;
+s=0;
+while(n<100){
+	n++;
+	s+=n;
+}
+document.write("결과:"+s+"<br>");
+
+//do~while
+n=0;
+s=0;
+do{
+	n++;
+	s+=n;
+}while(n<100);
+document.write("결과:"+s+"<br>");
+
+//for
+s=0;
+for(n=0; n<=100; n++){
+	s+=n;	
+}
+document.write("결과:"+s+"<br>");
+
+//for : 2~9 구구단
+for(n=2; n<=9; n++){
+	document.write(n+"단<br>");
+	for(s=1; s<=9; s++){
+		document.write(n+"*"+s+"="+(n*s)+"<br>");
+	}
+	document.write("<br>");
+}
+
+var arr=["자바", "스프링", "HTML"];
+for(var a=0; a<arr.length; a++)
+	document.write(arr[a]+"<br>");
+	
+for(var a in arr)
+	document.write(a+":"+arr[a]+"<br>");
+
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

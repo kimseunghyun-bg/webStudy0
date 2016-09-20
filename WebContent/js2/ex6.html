@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<input type="text" id="txt">
+	<br> keydown.event.keyCode :
+	<div id="result1" style="display: inline-block;"></div>
+	<br> keydown.event.which :
+	<div id="result2" style="display: inline-block;"></div>
+	<br> keypress.event.keyCode :
+	<div id="result3" style="display: inline-block;"></div>
+	<br> keypress.event.which :
+	<div id="result4" style="display: inline-block;"></div>
+	<br> keyup.event.keyCode :
+	<div id="result5" style="display: inline-block;"></div>
+	<br> keyup.event.which :
+	<div id="result6" style="display: inline-block;"></div>
+	<br>
+
+	<script type="text/javascript">
+		document.getElementById("txt").onkeydown = function(e) {
+			document.getElementById("result1").innerHTML = e.keyCode;
+			document.getElementById("result2").innerHTML = e.which;
+		};
+		document.getElementById("txt").onkeypress = function(e) {
+			document.getElementById("result3").innerHTML = e.keyCode;
+			document.getElementById("result4").innerHTML = e.which;
+		};
+		document.getElementById("txt").onkeyup = function(e) {
+			document.getElementById("result5").innerHTML = e.keyCode;
+			document.getElementById("result6").innerHTML = e.which;
+		};
+	</script>
+
+</body>
+</html>

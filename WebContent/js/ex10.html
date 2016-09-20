@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+function sub1(){
+	var s=prompt("수식을 입력 하세요.","");
+	var result=eval(s);
+	alert(s+"="+result);
+}
+
+function sub2(){
+	if(confirm("삭제하시겠습니까?")){
+		alert("삭제했습니다.");
+	}
+}
+
+</script>
+
+</head>
+<body>
+
+<button onclick="sub1();">계산기</button>
+<button onclick="sub2();">확인</button>
+
+</body>
+</html>

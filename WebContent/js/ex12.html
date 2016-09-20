@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//생성자
+function User(arg) {
+	this.name=arg;
+}
+// 함수 객체의 prototype을 이용한 함수정의(생성자에서 정의하는 것보다 효율적.)
+User.prototype.getName = function() {
+	return this.name;
+}
+// 
+User.prototype.setName = function(value) {
+	this.name=value;
+}
+
+var u1=new User("서울");
+console.log(u1.getName());
+</script>
+</head>
+<body>
+
+</body>
+</html>

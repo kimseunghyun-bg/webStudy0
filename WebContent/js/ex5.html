@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+function sum() {
+	var n=document.getElementById("num").value;
+	var s;
+	
+	n=parseInt(n);
+	s=0;
+	for(var i=1; i<=n; i++)
+		s+=i;
+	
+	alert("결과 : "+s);
+}
+
+</script>
+
+</head>
+<body>
+
+<input type="text" id="num">
+<input type="button" value="결과" onclick="sum();">
+
+</body>
+</html>

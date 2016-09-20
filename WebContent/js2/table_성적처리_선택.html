@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+*{
+	margin: 0px; padding: 0px;
+}
+body {
+	font-size: 9pt; font-family: 돋움;
+}
+a{
+	color: #000000;
+	text-decoration: none;
+	cursor: pointer;
+}
+a:active, a:hover {
+	text-decoration: underline;
+	color: tomato;
+}
+.title {
+	font-weight: bold;
+	font-size:13pt;
+	margin-bottom:10px;
+	font-family: 나눔고딕, 맑은 고딕, 돋움, sans-serif;
+}
+.btn {
+	 font-size: 12px;
+	 color:#333;
+ 	 font-weight:500;
+	 font-family: 나눔고딕, 맑은 고딕, 돋움, sans-serif;
+	 border:1px solid #ccc;
+	 background-color:#FFF;
+	 vertical-align:middle;
+	 text-align:text-align;
+	 cursor:cursor;
+	 padding:4px 8px;
+	 border-radius:4px;
+	 margin-bottom: 3px;
+}
+.btn:active, .btn:focus, .btn:hover {
+	 background-color:#e6e6e6;
+	 border-color: #adadad;
+	 color: #333;
+}
+.boxTF {
+	border:1px solid #999;
+	padding:4px 6px;
+	border-radius:4px;
+	background-color:#ffffff;
+	font-family: 나눔고딕, 맑은 고딕, 돋움, sans-serif;
+	font-size: 9pt;
+}
+.selectField {
+	border:1px solid #999;
+	padding:3px 6px;
+	border-radius:4px;
+	font-family: 나눔고딕, 맑은 고딕, 돋움, sans-serif;
+	font-size: 9pt;
+}
+</style>
+
+<script type="text/javascript">
+function check(){
+	//var f=document.forms[0];
+	var f=document.scoreForm;
+	
+	if(f.haks==undefined){
+		return;
+	}
+	
+	if(f.haks.length==undefined){
+		if(f.chkAll.checked)
+			f.haks.checked=true;
+		else
+			f.haks.checked=false;
+		
+		return;
+	}
+	
+	for(var i=0;i<f.haks.length;i++){
+		if(f.chkAll.checked)
+			f.haks[i].checked=true;
+		else
+			f.haks[i].checked=false;
+	}
+}
+
+function deleteList(){
+	
+	var f=document.scoreForm;
+	
+	if(f.haks==undefined){
+		return;
+	}
+	
+	var cnt=0;
+	if(f.haks.length==undefined){
+		if(f.haks.checked)
+			cnt++;
+	} else {
+		for(var i=0; i<f.haks.length; i++){
+			if(f.haks[i].checked)
+				cnt++;
+		}
+	}
+	
+	if(cnt==0){
+		alert("삭제할 자료를 먼저 선택 하세요...");
+		return;
+	}
+	
+	alert("삭제...");
+}
+
+</script>
+
+</head>
+<body>
+
+<div style="width: 700px; margin: 30px auto 0px;">
+
+	<div style="width:700px; height:30px; line-height:30px; margin:5px auto;">
+	   <img src="arrow.gif" alt="" style="padding-left: 5px; padding-right: 5px;">
+	   <span style="font-weight: bold;font-size:13pt;font-family: 나눔고딕, 맑은 고딕, 굴림;">성적처리</span>
+	</div>
+
+	<table style="width:700px; margin: 15px auto 0px;">
+		<tr height="30">
+		    <td align="left" width="50">
+		       <input type="button" value="삭제" class="btn" id="deleteListBtn" onclick="deleteList();">
+		    </td>
+			<td align="right">
+				<input type="button" value=" 등록하기 " class="btn">
+			</td>
+		<tr>
+	</table>
+
+	<form name="scoreForm" method="post">
+	<table style="width: 700px; margin: 0px auto 0px; border-spacing: 1px; background: #cccccc;">
+	<tr height="30"  bgcolor="#E4E6E4">
+		<td width="50" align="center">
+		   <input type="checkbox" name="chkAll" id="chkAll" style="margin-top: 3px;" onclick="check();">
+		</td>
+		<td width="60" align="center">학번</td>
+		<td width="100" align="center">이름</td>
+		<td width="80" align="center">생년월일</td>
+		<td width="50" align="center">국어</td>
+		<td width="50" align="center">영어</td>
+		<td width="50" align="center">수학</td>
+		<td width="50" align="center">총점</td>
+		<td width="50" align="center">평균</td>
+		<td width="50" align="center">석차</td>
+		<td width="110" align="center">변경</td>
+	</tr>   
+   
+	<tr height="30" bgcolor="#FFFFFF">
+		<td align="center">
+			<input type="checkbox" name="haks" value="2" style="margin-top: 3px;">
+		</td>
+		<td align="center">2</td>
+		<td align="center">자바다</td>
+		<td align="center">2000-01-01</td>
+		<td align="center">80</td>
+		<td align="center">80</td>
+		<td align="center">80</td>
+		<td align="center">240</td>
+		<td align="center">80</td>
+		<td align="center">3</td>
+		<td align="center">
+		    <a href="#">수정</a>
+		    | <a href="#">삭제</a>
+		</td>
+	</tr> 
+	
+	<tr height="30" bgcolor="#FFFFFF">
+		<td align="center">
+			<input type="checkbox" name="haks" value="1" style="margin-top: 3px;">
+		</td>
+		<td align="center">1</td>
+		<td align="center">홍길동</td>
+		<td align="center">2000-01-01</td>
+		<td align="center">50</td>
+		<td align="center">50</td>
+		<td align="center">50</td>
+		<td align="center">150</td>
+		<td align="center">50</td>
+		<td align="center">5</td>
+		<td align="center">
+		    <a href="#">수정</a> 
+		    | <a href="#">삭제</a>
+		</td>
+	</tr> 
+	
+	</table>
+	</form> 
+
+</div>
+
+</body>
+</html>

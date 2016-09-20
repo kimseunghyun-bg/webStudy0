@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+//생성자 함수 만들기
+function User(name, age, job){
+	this.name=name;
+	this.age=age;
+	this.job=job;
+	
+	// 함수를 여기서 설정하면 객체를 생성할때마다 메모리 할당
+	this.sayName = function(){
+		document.write(this.name+"<br>");
+	}
+}
+
+var u1 = new User("자바", 22, "학생");
+var u2 = new User("스프링", 20, "개발자");
+
+u1.sayName();
+u2.sayName();
+
+document.write(u2.job+"<br>");
+
+document.write((u1.constructor==User)+"<br>");
+document.write((u1 instanceof User)+"<br>");
+document.write((u1 instanceof Object)+"<br>");
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

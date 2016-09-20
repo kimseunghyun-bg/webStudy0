@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+var a;
+a=eval("3+6");
+
+document.write(a+"<br>");
+
+a="3+6";
+b=isFinite(a);
+document.write(a+":"+b+"<br>");	//false
+
+a="300";
+b=isFinite(a);
+document.write(a+":"+b+"<br>");	//true
+
+a="3,000";
+b=isFinite(a);
+document.write(a+":"+b+"<br>"); //false
+
+a="3+6";
+b=isNaN(a);
+document.write(a+":"+b+"<br>");	//true
+
+a="300";
+b=isNaN(a);
+document.write(a+":"+b+"<br>");	//false
+
+a="3,000";
+b=isNaN(a);
+document.write(a+":"+b+"<br>"); //true
+
+a="123";
+b=parseInt(a);
+document.write(a+":"+b+"<br>");	//123
+
+a="1,230";
+b=parseInt(a);
+document.write(a+":"+b+"<br>");	//1 (바꿀수 있는데 까지만 바꾼다.)
+
+a="12.34";
+b=parseInt(a);
+document.write(a+":"+b+"<br>");	//12 (바꿀수 있는데 까지만 바꾼다.)
+
+a="12ab";
+b=parseInt(a);
+document.write(a+":"+b+"<br>");	//12 (바꿀수 있는데 까지만 바꾼다.)
+
+a="ab12";
+b=parseInt(a);
+document.write(a+":"+b+"<br>");	//12 (바꿀수 있는데 까지만 바꾼다.)
+
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

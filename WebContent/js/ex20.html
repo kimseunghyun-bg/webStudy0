@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+function ddays(){
+	var sdate=document.getElementById("date").value;
+	if(sdate.length!=10){
+		alert("형식오류...");
+		return;
+	}
+	
+	var ss=sdate.split("-");
+	if(ss.length!=3){
+		alert("형식오류...");
+		return;
+	}
+	var y=parseInt(ss[0]);	//sdate.substr(0,4)
+	var m=parseInt(ss[1]);	//sdate.substr(5,2)
+	var d=parseInt(ss[2]);
+	
+	var date1=new Date();
+	var date2=new Date(y, m-1, d);
+	
+	var dday=(date2-date1) / 1000 / 60 / 60 / 24;
+	//dday=Math.floor(dday); //절삭
+	dday=Math.ceil(dday); //올림
+	
+	document.getElementById("result").innerHTML = dday+"일";
+	
+}
+
+</script>
+
+</head>
+<body>
+
+날짜 : <input type="text" id="date">
+<button type="button" onclick="ddays();">확인</button>
+<div id="result"></div>
+
+</body>
+</html>

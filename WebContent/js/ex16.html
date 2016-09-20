@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+//난수 발생
+
+/*
+for(var i=0; i<10; i++){
+	su=Math.floor(Math.random()*100)+1;
+	document.write(su+"<br>");
+}
+*/
+
+var num=new Array(10);
+function ransu() {
+	for(var i=0; i<num.length; i++){
+		num[i]=Math.floor(Math.random()*100)+1;
+	}
+}
+
+function compareAsc(a, b){
+	return a-b;
+}
+
+function compareDesc(a, b){
+	return -(a-b);
+}
+
+function result(){
+	ransu();
+	
+	document.write("source : ");
+	for(var i=0; i<num.length; i++)
+		document.write(num[i]+"&nbsp;");
+	document.write("<br>");
+	
+	//정렬
+	num.sort(compareAsc);
+	document.write("오름차순 : ");
+	for(var i=0; i<num.length; i++)
+		document.write(num[i]+"&nbsp;");
+	document.write("<br>");
+	
+	num.sort(compareDesc);
+	document.write("내림차순 : ");
+	for(var i=0; i<num.length; i++)
+		document.write(num[i]+"&nbsp;");
+	document.write("<br>");
+}
+
+result();
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

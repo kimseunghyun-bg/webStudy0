@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function send() {
+		var f = document.memberForm;
+		var s;
+
+		s = "아이디 : " + f.id.value;
+		s += "\n이름 : " + f.name.value;
+
+		alert(s)
+	}
+</script>
+</head>
+<body>
+
+	<form name="memberForm" action="javascript:send();" method="post">
+		<fieldset>
+			<legend>입력 사항</legend>
+			<p>
+				<label>아이디 : <input type="text" name="id" required="required" placeholder="아이디 입력" maxlength="10">
+				</label>
+			</p>
+			<p>
+				<label>패스워드 : <input type="password" name="pwd" placeholder="패스워드 입력">
+				</label>
+			</p>
+			<p>
+				<label>이름 : <input type="text" name="name">
+				</label>
+			</p>
+		</fieldset>
+
+
+		<fieldset>
+			<p>
+				<label><input type="radio" name="gender" value="m"
+					checked="checked">남자</label> <label><input type="radio"
+					name="gender" value="f">여자</label>
+			</p>
+		</fieldset>
+
+		<p>
+			<label> 전화번호 : <input type="tel" name="tel" required="required" 
+			pattern="(010-[0-9]{4}-[0-9]{4})">
+			</label>
+		</p>
+
+		<p>
+			<label> 이메일 : <input type="email" name="email">
+			</label>
+		</p>
+
+		<p>
+			<label> 생년월일 : <input type="date" name="birth">
+			</label>
+		</p>
+
+		<p>
+			<label> 나이 : <input type="number" name="age" min="10" max="100">
+			</label>
+		</p>
+
+		<p>
+			<label> 학력 : <input list="haks" name="hak"> <datalist
+					id="haks">
+					<option>대학원졸</option>
+					<option>대졸</option>
+					<option>고졸</option>
+					<option>기타</option>
+				</datalist>
+			</label>
+		</p>
+
+		<p>
+			<label> 출신도 : <select name="city">
+					<option value="">::선택::</option>
+					<option value="서울" selected="selected">서울</option>
+					<option value="경기">경기</option>
+					<option value="인천">인천</option>
+					<option value="기타">기타</option>
+			</select>
+			</label>
+		</p>
+
+		<p>
+			<label> 관심분야 : <select name="inte" multiple="multiple"
+				size="5">
+					<option>여행</option>
+					<option>게임</option>
+					<option>컴퓨터</option>
+					<option>바다</option>
+					<option>노래</option>
+			</select>
+			</label>
+		</p>
+
+		<p>
+			<label> 취미: <input type="checkbox" name="hobby" value="운동">
+				운동 <input type="checkbox" name="hobby" value="영화"> 영화 <input
+				type="checkbox" name="hobby" value="게임"> 게임 <input
+				type="checkbox" name="hobby" value="기타"> 기타
+			</label>
+		</p>
+
+		<p>
+			<label> 메모 : <textarea rows="5" cols="60" name="memo"></textarea>
+			</label>
+		</p>
+
+		<p>
+			<label> 약관동의 <input type="checkbox"
+				onchange="form.btn.disabled=!checked" checked="checked">
+			</label>
+		</p>
+
+		<p>
+			<input type="submit" name="btn" value="회원가입">
+		</p>
+
+	</form>
+</body>
+</html>

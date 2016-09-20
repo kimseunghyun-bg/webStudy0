@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+function bg(){
+	var r=Math.floor(Math.random()*256);
+	var g=Math.floor(Math.random()*256);
+	var b=Math.floor(Math.random()*256);
+	
+	var lay=document.getElementById("layout");
+	lay.style.backgroundColor="rgb("+r+","+g+","+b+")";
+	
+	setTimeout("bg()",100);
+}
+
+// bg(); -- div 가 생성되기전에 호출해서, lay부분에서 막힌다.
+
+/* 
+window.onload=function(){
+	bg();
+}
+ */
+</script>
+
+</head>
+<body>
+
+<div id="layout" style="width: 300px; height: 300px; border: 1px solid black;"></div>
+<script type="text/javascript">
+bg();
+</script>
+
+</body>
+</html>

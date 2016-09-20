@@ -1,0 +1,300 @@
+@charset "utf-8";
+.ds_calendar .blind{visibility:hidden;overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:0;line-height:0}
+.ds_calendar .input_chk{position:relative;top:-1px;width:13px;height:13px;margin-right:3px;vertical-align:middle}
+.ds_calendar{position:relative;clear:both;width:590px;margin-left:10px}
+.ds_calendar .tab{clear:both;position:relative;height:29px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/build/120913/cal/bg_tab.gif) 0 0 no-repeat;zoom:1}
+.ds_calendar .tab li{float:left;padding-left:1px;line-height:18px}
+.ds_calendar .tab li a{display:inline-block;width:117px;padding:6px 0 5px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/build/120913/cal/bg_tab.gif) 100% -59px no-repeat;font-family:'굴림',Gulim;font-size:12px;color:#68737f;text-align:center;text-decoration:none}
+.ds_calendar .tab li.frst a{width:117px}
+.ds_calendar .tab li.sec a{width:117px}
+.ds_calendar .tab li.last a{width:116px;background:none}
+.ds_calendar .tab .selected{margin-left:-2px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/build/120913/cal/bg_tab.gif) 0 -118px no-repeat}
+.ds_calendar .tab .selected a{background:url(https://ssl.pstatic.net/sstatic/keypage/outside/build/120913/cal/bg_tab.gif) 100% -118px no-repeat;font-weight:bold;color:#fff;cursor:default}
+.ds_calendar .tab li.frst.selected{margin-left:0}
+.ds_calendar .tab li.last.selected{width:118px;border-right:1px solid #5c6c81}
+.ds_calendar .con_calendar{overflow:hidden;width:588px;border:1px solid #e5e5e5;border-top:0;zoom:1;}
+.ds_calendar .calendar_area{float:left;position:relative;width:226px;height:262px;border-right:1px solid #e5e5e5}
+.ds_calendar .con_area{float:left;width:361px;margin-left:-1px;border-left:1px solid #e5e5e5}
+.ds_calendar .calendar_detail{overflow:hidden;clear:both;padding:7px 0 5px;_padding:8px 0 4px;border-top:1px solid #f0f0f1;font-size:12px}
+.ds_calendar .calendar_detail dt{float:left;margin-right:12px;_margin-right:9px;line-height:18px;color:#444 !important}
+.ds_calendar .calendar_detail dd{overflow:hidden;line-height:18px;zoom:1}
+.ds_calendar .calendar_detail .cs_bar{padding:0 2px 0 3px;color:#d8d8d8}
+.ds_calendar .calendar_offer{float:left;position:relative;margin:7px 0 0 7px;padding:3px 0 8px 8px;_padding:4px 0 7px 8px;font-size:11px;line-height:17px;font-family:'돋움',Dotum,AppleGothic,sans-serif;color:#989898;letter-spacing:-1px;zoom:1;background:url(https://ssl.pstatic.net/sstatic/search/img/sprite_bullet.gif) 0 -26px no-repeat;zoom:1;_margin-top:5px}
+.ds_calendar .calendar_offer a{margin-left:4px}
+.ds_calendar .calendar_offer img{vertical-align:top;margin-top:-1px;*margin-top:2px;*position:absolute;*top:0}
+
+/* 120810 */
+.sp{display:inline-block;float:left;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/build/120913/cal/cld_icon.png) no-repeat 0 0}
+.ds_calendar .m_calendar .c_header{height:28px;padding-top:11px;background:#fdfcfd}
+.ds_calendar .m_calendar .t_bg{width:25px;height:14px;margin-left:183px;margin-right:4px;padding-left:5px;padding-top:4px;background-position:0 -40px;font-family:'돋움',Dotum;font-size:11px;color:#6f757e;letter-spacing:-2px;text-decoration:none}
+.ds_calendar .m_calendar .cld_pre{width:20px;height:18px;background-position:-70px -20px}
+.ds_calendar .m_calendar .cld_next{width:20px;height:18px;background-position:-100px -20px}
+.ds_calendar .m_calendar .cld_dot{width:5px;height:18px;background-position:0 0}
+.ds_calendar .m_calendar .cld_n0{width:12px;height:18px;background-position:-10px 0}
+.ds_calendar .m_calendar .cld_n1{width:12px;height:18px;background-position:-30px 0}
+.ds_calendar .m_calendar .cld_n2{width:12px;height:18px;background-position:-50px 0}
+.ds_calendar .m_calendar .cld_n3{width:12px;height:18px;background-position:-70px 0}
+.ds_calendar .m_calendar .cld_n4{width:12px;height:18px;background-position:-90px 0}
+.ds_calendar .m_calendar .cld_n5{width:12px;height:18px;background-position:-110px 0}
+.ds_calendar .m_calendar .cld_n6{width:12px;height:18px;background-position:-130px 0}
+.ds_calendar .m_calendar .cld_n7{width:12px;height:18px;background-position:-150px 0}
+.ds_calendar .m_calendar .cld_n8{width:12px;height:18px;background-position:-170px 0}
+.ds_calendar .m_calendar .cld_n9{width:12px;height:18px;background-position:-190px 0}
+.ds_calendar .m_calendar .cld_null{width:12px;height:18px;background:0}
+.ds_calendar .m_calendar .cld_null2{width:6px;height:18px;background:0}
+.ds_calendar .m_calendar .cld_off{width:18px;height:18px;background-position:-55px -43px}
+.ds_calendar .m_calendar .cld_on{width:18px;height:18px;background-position:-35px -43px}
+.ds_calendar .m_calendar .cld_chk{float:left;margin-left:39px;font-family:'돋움',Dotum;font-size:11px;color:#65757e;letter-spacing:-1px}
+.ds_calendar .m_calendar .cld_chk label{padding:0 6px 0 2px;vertical-align:-2px}
+.ds_calendar .m_calendar .cld_chk .cld_moveday{ padding-right:7px}
+.ds_calendar .m_calendar .cld_chk .checkbox-mark{cursor:pointer}
+.ds_calendar .m_calendar .this_cld{overflow:hidden;clear:both;position:relative;width:auto;border-top:1px solid #d5d8da}
+.ds_calendar .m_calendar .this_cld table{table-layout:fixed;width:588px}
+.ds_calendar .m_calendar .this_cld table thead{background:url(https://ssl.pstatic.net/sstatic/keypage/outside/build/120913/cal/thead_bg.png) repeat-x 0 0}
+.ds_calendar .m_calendar .this_cld table thead th{height:23px;border-left:1px solid #eaedef;border-bottom:1px solid #e1e3e5;color:#7a7d8c;text-align:center}
+.ds_calendar .m_calendar .this_cld table thead th span{display:block;margin-top:2px}
+.ds_calendar .m_calendar .this_cld table thead th.frst_bd{border-left:0}
+.ds_calendar .m_calendar .this_cld table tbody td.frst_bd{border-left:0}
+.ds_calendar .m_calendar .this_cld table tbody td{height:81px;min-height:81px;padding-left:6px;border-left:1px solid #eaedef;border-top:1px solid #eaedef;text-align:left;vertical-align:top}
+.ds_calendar .m_calendar .this_cld table tbody .cld_date{position:relative;top:0;left:0}
+.ds_calendar .m_calendar .this_cld table tbody .date_head{height:22px;overflow:hidden;margin:0 0 4px}
+.ds_calendar .m_calendar .this_cld table tbody .cld_day{overflow:hidden;float:left;margin:4px 5px 0 0;font-family:Tahoma;font-weight:bold;color:#474747}
+.ds_calendar .m_calendar .this_cld table tbody .m_pre{color:#e7e7e7;cursor:pointer}
+.ds_calendar .m_calendar .this_cld table tbody .m_next{color:#e7e7e7;cursor:pointer}
+.ds_calendar .m_calendar .this_cld table tbody .h_day{color:#f44e4e}
+.ds_calendar .m_calendar .this_cld table tbody .s_day{color:#f44e4e}
+.ds_calendar .m_calendar .this_cld table tbody .cld_moveday{overflow:hidden;width:10px;height:10px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/build/120913/cal/cld_icon.png) no-repeat -130px -40px;margin:7px 0 0}
+.ds_calendar .m_calendar .this_cld table tbody .cld_leap{font-family:'돋움',Dotum;font-size:11px;font-weight:normal;color:#b3b3b3;margin-right:2px}
+.ds_calendar .m_calendar .this_cld table tbody .cld_lunar{overflow:hidden;position:absolute;top:6px;right:8px;margin-left:2px;font-size:10px;font-family:Tahoma;color:#bababa}
+.ds_calendar .m_calendar .this_cld table tbody .cld_today{border:1px solid #e0e0bf;background-color:#ffffd9}
+.ds_calendar .m_calendar .this_cld table tbody .cld_ly{display:inline-block;overflow:hidden;width:11px;height:11px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/build/120913/cal/cld_icon.png) no-repeat -80px -40px}
+.ds_calendar .m_calendar .this_cld table tbody .cld_ly.on{background-position:-100px -40px}
+.ds_calendar .m_calendar .this_cld table tbody .cld_base{display:inline-block;overflow:hidden;width:63px;margin-left:4px;font-size:12px;font-weight:normal;vertical-align:top;white-space:nowrap;text-overflow:ellipsis}
+.ds_calendar .m_calendar .this_cld table tbody .cld_holi{color:#f2412c}
+.ds_calendar .m_calendar .this_cld table tbody .cld_solarterm{color:#666}
+.ds_calendar .m_calendar .this_cld table tbody ul li{height:12px;margin-top:4px}
+.ds_calendar .m_calendar .this_cld table tbody ul li:first-child{margin:0}
+
+/* 양력음력변환 */
+.ds_calendar .trans_sun_lunar{overflow:hidden;min-height:262px;_height:262px;overflow:visible;background:#fcfcfc;zoom:1}
+.ds_calendar .trans_sun_lunar .set_date{padding:10px 0 15px 19px;border-bottom:1px solid #f0f0f0}
+.ds_calendar .trans_sun_lunar .set_date p{margin:3px 0 4px;_margin:4px 0;font-family:'돋움',dotum;font-size:11px;line-height:17px;color:#999;letter-spacing:-1px}
+.ds_calendar .trans_sun_lunar .set_date dl{overflow:hidden;margin-left:1px;font-size:12px;zoom:1}
+.ds_calendar .trans_sun_lunar .set_date dt{float:left;padding:4px 10px 0 0;_padding:5px 10px 0 0;font-weight:bold;color:#444}
+.ds_calendar .trans_sun_lunar .set_date dd{float:left;height:21px}
+.ds_calendar .trans_sun_lunar .set_date .input_txt{float:left;width:105px;height:15px;margin:0 3px 0 0;padding:4px 0 0 3px;border:1px solid #c9c9c9;font-size:12px;color:#999}
+.ds_calendar .trans_sun_lunar .set_date .input_txt_focus{float:left;width:104px;height:14px;margin:0 3px 0 0;padding:3px 0 0 2px;border:2px solid #59a509;font-size:12px;color:#000}
+.ds_calendar .trans_sun_lunar .set_date .input_txt_out{float:left;width:105px;height:15px;margin:0 3px 0 0;padding:4px 0 0 3px;border:1px solid #c9c9c9;font-size:12px;color:#000}
+.ds_calendar .trans_sun_lunar .set_date .sel_trans{margin:0 5px 0 0;_margin:1px 5px 0 0}
+.ds_calendar .trans_sun_lunar .set_date img{}
+.ds_calendar .trans_sun_lunar .today_info{padding:12px 0 11px 19px;_padding:13px 0 10px 19px}
+.ds_calendar .trans_sun_lunar .today_info .tit{margin-bottom:2px;font-size:12px;line-height:18px}
+.ds_calendar .trans_sun_lunar .today_info dl{overflow:hidden;font-size:12px;line-height:18px;zoom:1}
+.ds_calendar .trans_sun_lunar .today_info dt{float:left;clear:both;width:71px;line-height:18px;color:#848484}
+.ds_calendar .trans_sun_lunar .today_info dt .btn_help{margin:3px 0 3px -2px;_margin:2px 0 4px -2px;vertical-align:top;*vertical-align:middle}
+.ds_calendar .trans_sun_lunar .today_info dd{overflow:hidden;line-height:18px;color:#444;zoom:1}
+.ds_calendar .trans_sun_lunar .today_info .t_point{color:#ff4e1f}
+.ds_calendar .trans_sun_lunar .today_info .desc{margin:4px 0 0 1px;font-family:'돋움',dotum;font-size:11px;color:#999;letter-spacing:-1px}
+.ds_calendar .trans_sun_lunar .today_info.leap_month{padding:20px 0 0 19px;border-top:1px solid #f0f0f0}
+.ds_calendar .trans_sun_lunar .today_info .noti{margin:19px 0 0 57px;padding:1px 0 0 16px;background:url(https://ssl.pstatic.net/sstatic/keypage/lifesrch/calendar/img/bu_5.gif) 0 1px no-repeat;font-size:12px;color:#adadad}
+
+/* 날짜계산 */
+.ds_calendar .date_calculator{overflow:hidden;min-height:262px;_height:262px;overflow:visible;background:#fcfcfc;zoom:1}
+.ds_calendar .date_calculator .set_date{padding:10px 0 11px 20px;border-bottom:1px solid #f0f0f0}
+.ds_calendar .date_calculator .set_date dl{overflow:hidden;font-size:12px;zoom:1}
+.ds_calendar .date_calculator .set_date dt{float:left;margin-right:8px;_margin-right:5px;margin-left:-1px;padding:3px 0 6px;_padding:4px 0 5px;line-height:18px;font-weight:bold;color:#444}
+.ds_calendar .date_calculator .set_date dd{overflow:hidden;zoom:1}
+.ds_calendar .date_calculator .set_date dd .t_desc{padding:4px 0 6px;_padding:5px 0 5px;font-family:'돋움',dotum;font-size:11px;line-height:17px;color:#999;letter-spacing:-1px}
+.ds_calendar .set_date .btn_reset{vertical-align:top}
+.ds_calendar .date_calculator .input_txt{float:left;position:relative;width:86px;height:15px;margin:0 4px 0 0;padding:4px 0 0 3px;border:1px solid #c9c9c9;font-size:12px;color:#999}
+.ds_calendar .date_calculator .input_txt_default{float:left;width:86px;height:15px;margin:0 4px 0 0;padding:4px 0 0 3px;border:1px solid #c9c9c9;font-size:12px;color:#999}
+.ds_calendar .date_calculator .set_date dl dd .input_txt{float:left;width:257px;margin:0 3px 0 0}
+.ds_calendar .date_calculator .set_date dl dd .input_txt_default{float:left;width:257px;margin:0 3px 0 0}
+.ds_calendar .date_calculator .set_date dl dd .input_txt_focus{float:left;width:255px;margin:0 3px 0 0}
+.ds_calendar .date_calculator .set_date dl dd .input_txt_out{float:left;width:257px;margin:0 3px 0 0}
+.ds_calendar .date_calculator .set_date dl dd a{float:left}
+.ds_calendar .date_calculator .input_txt_focus{float:left;width:85px;height:14px;margin:0 4px 0 0;padding:3px 0 0 2px;border:2px solid #59a509;font-size:12px;color:#000}
+.ds_calendar .date_calculator .input_txt_out{float:left;width:86px;height:15px;margin:0 4px 0 0;padding:4px 0 0 3px;border:1px solid #c9c9c9;font-size:12px;color:#000}
+.ds_calendar .date_calculator .date_info{padding:11px 0 15px 20px}
+.ds_calendar .date_calculator .date_desc{padding:13px 0 0;_padding:15px 0 0;font-family:'돋움',dotum;font-size:11px;line-height:16px;color:#444;letter-spacing:-1px}
+.ds_calendar .date_calculator .t_pad{margin-left:7px}
+.ds_calendar .date_calculator .t_point{color:#ff4e1f}
+.ds_calendar .date_calculator .date_info .date_section{margin-bottom:4px}
+.ds_calendar .date_calculator .date_info .date_section span{float:left;height:30px;font-size:12px;color:#444;vertical-align:top}
+.ds_calendar .date_calculator .date_info .date_section span a{float:left;position:relative;margin:0 3px 0 0}
+.ds_calendar .date_calculator .input_result{width:83px;height:15px;padding:4px 0 0 3px;border:1px solid #c9c9c9;font-weight:bold;font-size:12px;color:#ff4e1f}
+.ds_calendar .date_calculator .date_info .date_section .col_txt{display:block;float:none;height:auto;padding:1px 0 4px;_padding:2px 0 3px;line-height:18px}
+.ds_calendar .date_calculator .date_info .date_section .col_txt2{width:93px;line-height:18px;height:18px;padding:2px 0 10px;_padding:3px 0 9px}
+
+/* 배란일계산 */
+.ds_calendar .ovulation_section{overflow:hidden;min-height:262px;_height:262px;overflow:visible;background:#fcfcfc;zoom:1}
+.ds_calendar .ovulation_section .set_date{padding:10px 0 14px 19px;border-bottom:1px solid #f0f0f0}
+.ds_calendar .ovulation_section .set_date p{font-size:12px;color:#777}
+.ds_calendar .ovulation_section .set_date p.t_desc{padding:3px 0 4px;_padding:4px 0 3px;font-family:'돋움',dotum;font-size:11px;line-height:17px;color:#999;letter-spacing:-1px}
+.ds_calendar .ovulation_section .set_date dl{overflow:hidden;margin-bottom:3px;font-size:12px;zoom:1}
+.ds_calendar .ovulation_section .set_date dt{float:left;margin:0 7px 0 0;padding:1px 0 2px;_padding:2px 0 1px;line-height:18px;font-weight:bold;color:#444}
+.ds_calendar .ovulation_section .set_date dt.alt{}
+.ds_calendar .ovulation_section .set_date dd{float:left}
+.ds_calendar .ovulation_section .set_date dd.alt{padding-right:2px}
+.ds_calendar .ovulation_section .set_date .input_txt{float:left;width:83px;height:15px;margin:0 5px 0 0;padding:4px 0 0 3px;border:1px solid #c9c9c9;font-size:12px;color:#999}
+.ds_calendar .ovulation_section .set_date .input_txt_default{float:left;width:83px;height:15px;margin:0 5px 0 0;padding:4px 0 0 3px;border:1px solid #c9c9c9;font-size:12px;color:#999}
+.ds_calendar .ovulation_section .set_date .input_txt_focus{float:left;width:82px;height:14px;margin:0 5px 0 0;padding:3px 0 0 2px;border:2px solid #59a509;font-size:12px;color:#000}
+.ds_calendar .ovulation_section .set_date .input_txt_out{float:left;width:83px;height:15px;margin:0 5px 0 0;padding:4px 0 0 3px;border:1px solid #c9c9c9;font-size:12px;color:#000}
+.ds_calendar .ovulation_section .set_date .sel_trans{margin:0 5px 0 0;_margin:1px 5px 0 0}
+.ds_calendar .ovulation_section .set_date .btn_area{clear:both;padding-top:7px;text-align:center}
+.ds_calendar .ovulation_section .set_date .btn_area img{vertical-align:top}
+.ds_calendar .ovulation_section .direct_info{padding:32px 0 0 67px}
+.ds_calendar .ovulation_section .direct_info p{padding:4px 0 8px 16px;background:url(https://ssl.pstatic.net/sstatic/keypage/lifesrch/calendar/img/bu_5.gif) 0 4px no-repeat;font-size:12px;color:#adadad;letter-spacing:-1px}
+.ds_calendar .plan_area{position:relative;padding:10px 19px}
+.ds_calendar .plan_area .plan_tit{padding:2px 0 10px;_padding:3px 0 9px;line-height:18px;font-size:12px}
+.ds_calendar .plan_area .plan_tit .t_point{color:#ff4e1f}
+.ds_calendar .plan_area .plan_ico{position:absolute;top:13px;right:20px;padding:1px 0 1px 11px;_padding:2px 0 0 11px;background:url(https://ssl.pstatic.net/sstatic/keypage/lifesrch/calendar/img/bu_4.gif) 0 3px no-repeat;line-height:13px;font-family:'돋움',dotum;font-size:11px;color:#777;letter-spacing:-1px}
+.ds_calendar .plan_area .plan_graph{position:relative;width:323px;height:60px;background:url(https://ssl.pstatic.net/sstatic/keypage/lifesrch/calendar/img/bg_graph3.gif) 0 21px no-repeat}
+.ds_calendar .plan_area .plan_graph p{font-family:'돋움',dotum;font-size:11px;letter-spacing:-1px}
+.ds_calendar .plan_area .plan_graph p span{font-family:verdana;line-height:14px}
+.ds_calendar .plan_area .plan_graph p.plan_prev{position:absolute;left:0;bottom:-12px;color:#999}
+.ds_calendar .plan_area .plan_graph p.plan_next{position:absolute;right:0;bottom:-12px;color:#999;text-align:right}
+.ds_calendar .plan_area .plan_graph p.plan_prev span,.plan_area .plan_graph p.plan_next span{display:block;margin-top:-2px;font-size:10px}
+.ds_calendar .plan_area .plan_graph p.plan_ing{position:absolute;left:169px;bottom:24px;_bottom:23px;height:35px;background:url(https://ssl.pstatic.net/sstatic/keypage/lifesrch/calendar/img/bg_line3.gif) 50% 0 repeat-y;text-align:center}
+.ds_calendar .plan_area .plan_graph p.plan_ing .dsc_txt{display:inline-block;height:14px;margin-bottom:4px;padding:0 2px;border:1px solid #919191;background:#fff;font-family:'돋움',dotum;font-size:11px;color:#777;letter-spacing:-1px}
+.ds_calendar .plan_area .plan_graph p.plan_ing .dsc_txt span{font-family:verdana;color:#444}
+.ds_calendar .plan_area .plan_graph .plan_bar{display:block;width:92px;height:16px;margin:0 auto;border-left:1px solid #2950aa;background:url(https://ssl.pstatic.net/sstatic/keypage/lifesrch/calendar/img/bg_bar.gif) 100% 0 no-repeat}
+.ds_calendar .plan_area .plan_desc{position:relative;margin-top:21px;padding-left:8px;font-family:'돋움',dotum;font-size:11px;line-height:15px;color:#b2b2b2;letter-spacing:-1px}
+.ds_calendar .plan_area .plan_desc span{position:absolute;margin-left:-7px}
+.ds_calendar .ovulat input{float:left;top:0;margin:4px 2px 0 0;vertical-align:top}
+.ds_calendar .ovulat label{float:left;margin:2px 0 1px;_margin:3px 0 0;line-height:18px;color:#777;vertical-align:top}
+
+/* 전역일계산 */
+.ds_calendar .army_section{overflow:hidden;min-height:262px;_height:262px;overflow:visible;background:#fcfcfc;zoom:1}
+.ds_calendar .army_section .set_date{padding:10px 0 14px 20px;border-bottom:1px solid #f0f0f0}
+.ds_calendar .army_section .set_date dl{overflow:hidden;font-size:12px;zoom:1}
+.ds_calendar .army_section .set_date dt{float:left;margin-right:8px;_margin-right:5px;margin-left:-1px;padding:3px 0 6px;_padding:4px 0 5px;line-height:18px;font-weight:bold;color:#444}
+.ds_calendar .army_section .set_date dd{overflow:hidden;zoom:1}
+.ds_calendar .army_section .set_date dd .t_desc{padding:4px 0 6px;_padding:5px 0 5px;font-family:'돋움',dotum;font-size:11px;line-height:17px;color:#999;letter-spacing:-1px}
+.ds_calendar .set_date .btn_reset{vertical-align:top}
+.ds_calendar .army_section .set_date .input_txt{float:left;width:90px;height:15px;margin:0 3px 0 0;padding:4px 0 0 3px;border:1px solid #c9c9c9;font-size:12px;line-height:12px;color:#999}
+.ds_calendar .army_section .set_date .input_txt_default{float:left;width:90px;height:15px;margin:0 3px 0 0;padding:4px 0 0 3px;border:1px solid #c9c9c9;font-size:12px;line-height:12px;color:#000}
+.ds_calendar .army_section .set_date .input_txt_focus{float:left;width:89px;height:14px;margin:0 3px 0 0;padding:3px 0 0 2px;border:2px solid #59a509;font-size:12px;line-height:12px;color:#000}
+.ds_calendar .army_section .set_date .input_txt_out{float:left;width:90px;height:15px;margin:0 3px 0 0;padding:4px 0 0 3px;border:1px solid #c9c9c9;font-size:12px;line-height:12px;color:#000}
+.ds_calendar .army_section .set_date .sel_kind{float:left;margin:0 5px 0 0;_margin:1px 2px 0 0;vertical-align:top}
+.ds_calendar .army_section .set_date img{vertical-align:top}
+.ds_calendar .army_section .direct_info{padding:10px 19px}
+.ds_calendar .army_section .direct_info p{padding:3px 0 3px 8px;_padding:4px 0 2px 8px;font-size:11px;line-height:15px;font-family:'돋움',dotum;color:#adadad;letter-spacing:-1px}
+.ds_calendar .army_section .direct_info p span{position:absolute;margin-left:-7px}
+
+.ds_calendar .army_section .date_graph{position:relative;padding:10px 0 0 19px}
+.ds_calendar .army_section .date_graph .plan_tit{padding:2px 0 10px;_padding:3px 0 9px;line-height:18px;font-size:12px}
+.ds_calendar .army_section .date_graph .plan_tit .t_point{color:#ff4e1f}
+.ds_calendar .army_section .date_graph .plan_ico{position:absolute;top:13px;right:20px;padding:1px 0 1px 11px;_padding:2px 0 0 11px;background:url(https://ssl.pstatic.net/sstatic/keypage/lifesrch/calendar/img/bu_4.gif) 0 3px no-repeat;line-height:13px;font-family:'돋움',dotum;font-size:11px;color:#777;letter-spacing:-1px}
+
+.ds_calendar .date_graph .plan_graph{position:relative;width:323px;height:56px;background:url(https://ssl.pstatic.net/sstatic/keypage/lifesrch/calendar/img/bg_graph3.gif) 0 21px no-repeat}
+.ds_calendar .date_graph .plan_graph p{font-family:'돋움',dotum;font-size:11px;letter-spacing:-1px}
+.ds_calendar .date_graph .plan_graph p span{font-family:verdana}
+.ds_calendar .date_graph .plan_graph p.plan_prev{position:absolute;left:0;bottom:-12px;color:#999}
+.ds_calendar .date_graph .plan_graph p.plan_next{position:absolute;right:0;bottom:-12px;color:#000;text-align:right}
+.ds_calendar .date_graph .plan_graph p.plan_prev span{display:block;margin-top:-2px;font-size:10px;color:#999}
+.ds_calendar .date_graph .plan_graph p.plan_next span{display:block;margin-top:-2px;font-size:10px;color:#000}
+.ds_calendar .date_graph .plan_graph p.plan_ing{position:absolute;left:0;bottom:20px;_bottom:19px;height:35px;background:url(https://ssl.pstatic.net/sstatic/keypage/lifesrch/calendar/img/bg_line3.gif) 100% 0 repeat-y}
+.ie8 .ds_calendar .date_graph .plan_graph p.plan_ing{bottom:20px}
+.ds_calendar .date_graph .plan_graph p.plan_ing .dsc_txt{display:inline-block;position:absolute;top:0;right:0;width:24px;height:12px;margin:0 -23px 8px 0;padding:2px 2px 0;border:1px solid #919191;background:#fff;font-family:'돋움',dotum;font-size:11px;color:#444;letter-spacing:-1px}
+.ds_calendar .date_graph .plan_graph p.plan_ing.nobg{background:none}
+.ds_calendar .date_graph .plan_graph .plan_bar{display:block;height:16px;margin:20px 0 0 1px;_margin:21px 0 0 1px;border-left:1px solid #2950aa;background:#557cd5 url(https://ssl.pstatic.net/sstatic/keypage/lifesrch/calendar/img/bg_bar.gif) 100% 0 no-repeat}
+.ds_calendar .date_graph .plan_graph .graph_over{background:#6994e2 url(https://ssl.pstatic.net/sstatic/keypage/lifesrch/calendar/img/bg_bar_over.gif) 100% 0 no-repeat}
+.ds_calendar .date_graph .plan_graph .plan_percent{position:absolute;right:0;bottom:1px;_bottom:2px;width:35px;margin-right:-38px;font-weight:bold;font-size:10px;color:#557cd5}
+.ds_calendar .date_graph .plan_graph .full .dsc_txt{margin-right:-6px !important}
+.ds_calendar .date_graph .plan_graph .full .plan_percent{right:42px;color:#fff;text-align:right}
+.ds_calendar .date_graph .plan_desc{margin-top:31px;font-family:'돋움',dotum;font-size:11px;color:#b2b2b2;letter-spacing:-1px}
+
+.ds_calendar .date_graph .plan_graph .graph_alt_wrap{position:absolute;bottom:32px;padding-bottom:5px;background:url(https://ssl.pstatic.net/sstatic/keypage/lifesrch/calendar/img/bg_alt.gif) 50% 100% no-repeat}
+.ds_calendar .date_graph .plan_graph .graph_alt{background-color:#fff}
+.ds_calendar .date_graph .plan_graph .graph_alt ul{padding:5px 8px 4px;border:1px #5d5d5d solid;border-bottom:none}
+.ds_calendar .date_graph .plan_graph .graph_alt ul li{font-size:11px;line-height:14px;color:#777}
+.ds_calendar .date_graph .plan_graph .graph_alt ul li span{color:#444}
+
+/* 체크박스 디자인 */
+.checkbox-applied{display:-moz-inline-block;display:-moz-inline-box;display:inline-block;overflow:hidden;position:relative;width:15px;height:15px;vertical-align:middle}
+.checkbox-applied span.checkbox-mark,.checkbox-applied span.checkbox-mark.checkbox-checked{display:-moz-inline-block;display:-moz-inline-box;display:inline-block;position:absolute;left:0;top:0;width:15px;height:15px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/build/120913/cal/CheckBox.radio_check2.gif) no-repeat -19px 0px}
+.checkbox-applied span.checkbox-mark.checkbox-checked{background-position:-19px -18px}
+.checkbox-applied input{position:absolute;left:-9999px}
+
+/* 캘린더, 까페, 블로그 담기 레이어 */
+.ds_calendar .ly_put{position:absolute;top:347px;left:355px;width:139px;height:85px;border:1px solid #a3a3a3;background-color:#fff;z-index:10}
+.ds_calendar .ly_put ul{margin-top:12px;margin-left:11px}
+.ds_calendar .ly_put ul li{overflow:hidden;margin-top:7px}
+.ds_calendar .ly_put ul li:first-child{margin:0}
+.ds_calendar .ly_put ul li a{margin-left:8px;font-size:12px;color:#444;vertical-align:-1px}
+.ds_calendar .ly_put .ly_bg{width:18px;height:16px;background-position:0 -20px}
+.ds_calendar .ly_put .ly_bg2{width:18px;height:16px;background-position:-20px -20px}
+.ds_calendar .ly_put .ly_bg3{width:18px;height:16px;background-position:-40px -20px}
+.ds_calendar .ly_put .ly_clse{overflow:hidden;position:absolute;top:0;right:0;width:18px;height:18px;background-position:-146px -35px}
+.ds_calendar .ly_put .ly_clse a{display:inline-block;width:18px;height:18px;text-indent:-9999px}
+
+/* 년월직접 선택 레이어 */
+.ds_calendar .ly_direct_select{position:absolute;top:34px;left:4px;z-index:10;width:218px;_width:218px;height:130px;_height:132px;border:1px solid #a3a3a3;background:url(https://ssl.pstatic.net/sstatic/keypage/lifesrch/calendar/img/bg_line.gif) 113px 0 repeat-y #fff}
+.ds_calendar .m_calendar .ly_direct_select{top:64px !important;left:184px !important}
+.ds_calendar .ly_direct_select .tit_ds{margin:10px 0 2px 9px;font-weight:bold;font-size:12px;color:#444}
+.ds_calendar .ly_direct_select .btn_clse{position:absolute;top:4px;right:4px}
+.ds_calendar .ly_direct_select .sel_year{overflow-x:hidden;overflow-y:scroll;float:left;width:107px;height:100px;margin:0 7px 0 1px;scrollbar-face-color:#fff;scrollbar-highlight-color:#fff;scrollbar-shadow-color:#fff;scrollbar-3dlight-color:#e7e7e7;scrollbar-arrow-color:#bcbcbc;scrollbar-track-color:#fafafa;scrollbar-track-color:#fff;scrollbar-darkshadow-color:#e7e7e7;scrollbar-base-color:#fff}
+.ds_calendar .ly_direct_select .sel_year a{display:block;width:88px;_width:90px;height:15px;_height:20px;padding:5px 0 0 8px;font-size:12px;color:#777}
+.ds_calendar .ly_direct_select .sel_year a:hover{background:#e9f0f4;color:#010101;text-decoration:none}
+.ds_calendar .ly_direct_select .sel_year .selected a,.ds_calendar .ly_direct_select .sel_month .selected a{background:#e9f0f4;font-weight:bold;color:#010101;text-decoration:none}
+.ds_calendar .ly_direct_select .sel_month{overflow-x:hidden;overflow-y:scroll;float:left;width:96px;height:100px;padding-top:1px;margin-top:-1px;scrollbar-face-color:#fff;scrollbar-highlight-color:#fff;scrollbar-shadow-color:#fff;scrollbar-3dlight-color:#e7e7e7;scrollbar-arrow-color:#bcbcbc;scrollbar-track-color:#fafafa;scrollbar-track-color:#fff;scrollbar-darkshadow-color:#e7e7e7;scrollbar-base-color:#fff}
+.ds_calendar .ly_direct_select .sel_month a{display:block;width:71px;_width:79px;height:15px;_height:20px;padding:5px 0 0 8px;font-size:12px;color:#777}
+.ds_calendar .ly_direct_select .sel_month a:hover{background:#e9f0f4;color:#010101;text-decoration:none}
+
+/* Calendar */
+.ds_calendar .calendar{float:left;background:url(https://ssl.pstatic.net/sstatic/keypage/lifesrch/sports/img/bg_calendar.gif) repeat-x left 42px}
+.ds_calendar .calendar table{width:203px;margin:0 11px 0 12px}
+.ds_calendar .calendar thead th{padding:9px 0 11px;font:12px '돋움',Dotum;font-weight:normal;color:#777;text-align:center}
+.ds_calendar .calendar tbody td{width:29px;height:26px;padding:0;font:11px/12px tahoma;color:#777;text-align:center;vertical-align:top}
+.ds_calendar .calendar tbody td a{display:block;width:28px;height:24px;padding-top:1px;color:#333;text-decoration:none}
+.ds_calendar .calendar tbody td a:hover{background:#ebebeb;color:#333}
+.ds_calendar .calendar tbody td.sun,.ds_calendar .calendar tbody td.sun a,.ds_calendar .calendar tbody td.holiday,.ds_calendar .calendar tbody td.holiday a{color:#f2412c !important}
+.ds_calendar .calendar tbody td.sat,.ds_calendar .calendar tbody td.sat a{color:#5266b2}
+.ds_calendar .calendar tbody td.selected,.ds_calendar .calendar tbody td.selected a,.ds_calendar .calendar tbody td.selected a:hover{background:url(https://ssl.pstatic.net/sstatic/keypage/lifesrch/calendar/img/bg_today.gif) no-repeat;font-weight:bold;color:#fff !important}
+.ds_calendar .calendar tbody td.selected a:hover{text-decoration:none}
+.ds_calendar .calendar tbody td.prev a,.ds_calendar .calendar tbody td.next a{background:none;color:#b3b3b3 !important}
+.ds_calendar .calendar tbody td.prev a:hover,.ds_calendar .calendar tbody td.next a:hover{background:none;color:#333}
+.ds_calendar .calendar tbody td .lunar{font-family:tahoma;font-size:9px;color:#bababa}
+.ds_calendar .calendar tbody td.selected .lunar{font-weight:normal;color:#fff}
+.ds_calendar .thismonth{width:226px;height:29px;padding-top:13px;color:#4d4d4d;text-align:center}
+.ds_calendar .thismonth a{display:inline-block;margin:0 2px 0 0;padding:4px 2px 0}
+.ds_calendar .thismonth a,.ds_calendar .thismonth a:hover{text-decoration:none}
+.ds_calendar .thismonth a .btn_prev{margin:0 4px 0 0}
+.ds_calendar .thismonth a .btn_arr{margin:0 2px 0 -3px}
+.ds_calendar .thismonth a .btn_next{margin:0 2px 0 -2px}
+.ds_calendar .lunar_area{padding:9px 0 0 15px;border-top:1px solid #f3f4f5;font-size:11px;color:#999;letter-spacing:-1px}
+.ds_calendar .lunar_area label{font:11px '돋움',Dotum}
+.ds_calendar .lunar_area span{padding:0 4px 0 3px;color:#eaeaea}
+.ds_calendar .lunar_area a{font:11px '돋움',Dotum;color:#999;text-decoration:underline}
+.ds_calendar p.info{display:inline-block;float:left;clear:both;position:relative;margin:7px 0 0;padding:3px 0 8px 20px;_padding:4px 0 7px 20px;background:url(https://ssl.pstatic.net/sstatic/search/tx/ico_info.gif) 0 3px no-repeat;font-size:11px;line-height:17px;font-family:'돋움',Dotum,AppleGothic,sans-serif;color:#989898;letter-spacing:-1px;zoom:1}
+.ds_calendar p.info .bar{margin:-1px 7px 1px 5px;*margin:0 6px 0 4px}
+.ds_calendar .info a{color:#999;text-decoration:underline}
+.ds_calendar .info a strong{font-weight:normal;letter-spacing:0}
+
+/* 만나이계산 */
+.ds_calendar .years_reckon{overflow:hidden;position:relative;background:#fcfcfc}
+.ds_calendar .years_reckon .set_date{padding:10px 0 14px 19px;border-bottom:1px solid #f0f0f0}
+.ds_calendar .years_reckon .set_date p{font-size:12px;color:#777}
+.ds_calendar .years_reckon .set_date p.t_desc{padding:4px 0;font-family:'돋움',dotum;font-size:11px;line-height:17px;color:#999;letter-spacing:-1px}
+.ds_calendar .years_reckon .set_date dl{margin-bottom:3px;margin-top:2px;font-size:12px}
+.ds_calendar .years_reckon .set_date dt{float:left;margin:1px 6px 0 0;padding:1px 0 2px;line-height:18px;font-weight:bold;color:#444}
+.ds_calendar .years_reckon .set_date dd{float:left;margin-right:4px}
+.ds_calendar .years_reckon .set_date .input_txt{float:left;width:85px;height:15px;margin:0 5px 0 0;padding:4px 0 0 6px;border:1px solid #c9c9c9;font-size:12px;line-height:12px;color:#999}
+.ds_calendar .years_reckon .set_date .input_txt_default{float:left;width:85px;height:15px;margin:0 5px 0 0;padding:4px 0 0 6px;border:1px solid #c9c9c9;font-size:12px;line-height:12px;color:#000}
+.ds_calendar .years_reckon .set_date .input_txt_focus{float:left;width:84px;height:14px;margin:0 5px 0 0;padding:3px 0 0 5px;border:2px solid #59a509;font-size:12px;line-height:12px;color:#000}
+.ds_calendar .years_reckon .set_date .input_txt_out{float:left;width:85px;height:15px;margin:0 5px 0 0;padding:4px 0 0 6px;border:1px solid #c9c9c9;font-size:12px;line-height:12px;color:#000}
+.ds_calendar .years_reckon .set_date .btn_area{clear:both;padding-top:9px;text-align:center}
+.ds_calendar .years_reckon .set_date .btn_area img{vertical-align:top}
+.ds_calendar .years_reckon .yr_today{position:absolute;top:37px;left:308px}
+.ds_calendar .years_reckon .yr_today_bg{display:inline-block;width:27px;height:16px;padding-left:6px;padding-top:6px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/build/120913/cal/cld_icon.png) no-repeat -170px -30px;font-family:'돋움',dotum;font-size:11px;color:#5c5c5c;letter-spacing:-1px;text-decoration:none}
+
+/* 만나이계산 결과 */
+.ds_calendar .years_reckon .years_result{overflow-x:hidden;overflow-y:auto;height:157px}
+.ds_calendar .years_reckon .years_result strong{color:#ff4e1f}
+.ds_calendar .years_reckon .years_head{width:284px;margin:14px 0 0 20px;padding:1px 0 0 27px;border:1px solid #e5e5e5;background-color:#fff;font-weight:bold;line-height:26px;font-size:12px;text-align:center}
+.ds_calendar .years_reckon .years_result ul{margin:9px 0 0 20px;padding:0 0 10px;font-size:12px}
+.ds_calendar .years_reckon .years_result ul li{padding-left:9px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/build/120913/cal/blt.png) no-repeat 0 8px;line-height:20px;color:#444}
+.ds_calendar .years_reckon .years_result ul li .years_noim{color:#f2412c}
+.ds_calendar .years_reckon .years_result ul li span{color:#848484}
+.ds_calendar .years_reckon .years_result{scrollbar-shadow-color:#fff;scrollbar-highlight-color:#fff;scrollbar-face-color:#fff;scrollbar-3dlight-color:#e6e6e8;scrollbar-darkshadow-color:#e6e6e8;scrollbar-track-color:#f4f5f5;scrollbar-arrow-color:#9b9fac}

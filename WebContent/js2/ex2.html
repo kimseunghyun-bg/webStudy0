@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+var win=null;
+function openWin(){
+	win=window.open("test.html","","width=300, height=300");
+}
+
+function closeWin(){
+	if(win!=null)
+		win.close();
+	win=null;
+}
+</script>
+
+</head>
+<body>
+
+<a href="javascript:openWin();">열기</a><br>
+<a href="javascript:closeWin();">닫기</a><br> 
+
+</body>
+</html>

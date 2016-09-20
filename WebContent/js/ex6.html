@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+// 익명함수
+var add = function (a,b){
+	return a+b;
+}
+
+document.write(add(10,5)+"<br>");
+
+var add2 = function sum(n) {
+	if(n==1){
+		return 1;
+	}else {
+		return n+sum(n-1);
+	}
+}
+
+document.write(add2(100)+"<br>");
+
+var pow = function powin(n,m) {
+	if(m<1)
+		return 1;
+	
+	return n*powin(n,m-1);
+}
+
+document.write(pow(2,10)+"<br>");
+
+// 함수 선언문에서의 함수 호이스팅(선언전 호출)
+document.write(sub(2,10)+"<br>");
+function sub(a,b) {
+	return a+b;	
+}
+
+// (함수 표현식에서의 함수 호이스팅 불가능)
+/*
+document.write(sub2(10,10)+"<br>");
+var sub2 = function(a,b) {
+	return a+b;	
+}	한줄에 문제가 생기면 여기서부터 끝까지 실행되지 않음 
+*/
+
+function sub3( a, b, c){
+	return a+b+c;
+}
+
+document.write(sub3(10)+"<br>");
+
+//함수 인자에 관대하다.
+function sub4(){
+	for(var n=0; n<sub4.arguments.length; n++){
+		document.write(sub4.arguments[n]+"<br>");
+	}
+}
+sub4(10,20,30);
+
+//페이지 실행시 호출할 콜백함수
+window.onload = function() {
+	alert("환영 합니다.");
+}
+
+
+var seq = function() {
+	var s=0;
+	return function(){
+		return ++s;
+	}
+}
+
+var ss=seq();
+
+document.write(ss()+"<br>");
+document.write(ss()+"<br>");
+document.write(ss()+"<br>");
+
+
+
+
+
+
+</script>
+
+</head>
+<body>
+
+익명함수 예제
+
+</body>
+</html>

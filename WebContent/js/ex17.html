@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+function result(){
+	
+	var cnt=document.getElementById("count").value;
+	lotto(cnt);
+	
+	if(! cnt){
+		alert("갯수를 입력해라");
+		document.getElementById("count").focus();
+		return;
+	}
+	
+	if(isNaN(cnt)){
+		alert("아 좀 숫자만!");
+		document.getElementById("count").focus();
+		return;
+	}
+	
+	cnt=parseInt(cnt);
+	if(cnt<1 || cnt > 5){
+		alert("1~5사이의 숫자만 가능합니다...");
+		document.getElementById("count").focus();
+		return;
+	}
+}
+
+var num=new Array(6);
+function ransu() {
+	for(var i=0; i<6; i++){
+		num[i]=Math.floor(Math.random()*45)+1;
+		//중복검사
+		for(var j=0; j<i; j++){
+			if(num[j]==num[i]){
+				i--;
+				break;
+			}
+		}
+	}
+}
+
+function compareAsc(a, b){
+	return a-b;
+}
+
+function oneLotto(){
+	ransu();
+	num.sort(compareAsc);
+}
+
+function lotto(n){
+	var output=document.getElementById("output");
+	output.innerHTML="";
+	for(var i=0; i<n; i++){
+		oneLotto();
+		for(var j=0; j<6; j++){
+			var s=output.innerHTML;
+			output.innerHTML=s+num[j]+"&nbsp&nbsp&nbsp;";
+		}
+		output.innerHTML=s+"<br>";
+	}
+}
+
+</script>
+
+</head>
+<body>
+
+	<input type="text" id="count">
+	<button onclick="result()">구매</button>
+	<br>
+	<br>
+	<div id="output"></div>
+
+</body>
+</html>

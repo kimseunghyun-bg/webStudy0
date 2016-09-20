@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+function onlyNum(){
+	if(event.keyCode<48 || event.keyCode>57){
+		try {
+			event.preventDefault();	//이벤트 취소
+		} catch (e) {
+			event.returnValue=false;	//IE8
+		}
+	}
+}
+
+function onlyHan(){
+	if(event.keyCode<12592 || event.keyCode>12687){
+		try {
+			event.preventDefault();	//이벤트 취소
+		} catch (e) {
+			event.returnValue=false;	//IE8
+		}
+	}
+}
+</script>
+
+</head>
+<body>
+
+	숫자 :
+	<input type="text" size="20" maxlength="10" onkeypress="onlyNum();">
+
+	한글 :
+	<input type="text" size="20" maxlength="10" onkeypress="onlyHan();">
+
+</body>
+</html>

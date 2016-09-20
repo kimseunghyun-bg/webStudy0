@@ -1,0 +1,23 @@
+package com.tag;
+
+import javax.servlet.jsp.JspException;
+import javax.servlet.jsp.JspWriter;
+import javax.servlet.jsp.tagext.TagSupport;
+
+public class HelloTag extends TagSupport{
+	private static final long serialVersionUID = 1L;
+
+	@Override
+	public int doStartTag() throws JspException {
+		JspWriter out=pageContext.getOut();
+		
+		try {
+			out.print("<b>반가워요</b>");
+		} catch (Exception e) {
+			throw new JspException(e);
+		}
+		
+		return SKIP_BODY; //몸체가 없는 태그<br>같은애들 그런데 xml을 따라서 /닫아줘야함 xhtml이라고함.
+	}
+	
+}

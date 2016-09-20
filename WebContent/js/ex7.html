@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+function sub(){
+	var layout=document.getElementById("layout");
+	
+	//var s=layout.innerText;
+	var s=layout.innerHTML;
+	layout.innerHTML=s+"자바스크립트<br>"
+}
+
+function stop(){
+	clearInterval(id);
+}
+
+var id=setInterval("sub()",2000);	//2초에 한번씩 실행
+
+setTimeout("alert('안녕 나는 한번만 실행 된다.')",3000);
+
+
+
+</script>
+
+</head>
+<body>
+
+<input type="button" value="중지" onclick="stop();"><br>
+
+<div id="layout"></div>
+
+
+
+</body>
+</html>
